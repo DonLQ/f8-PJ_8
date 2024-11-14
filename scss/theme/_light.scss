@@ -1,0 +1,18 @@
+@use "../abstracts";
+
+html {
+    --text-color: #1A162E;
+    --icon-color: brightness(0) saturate(100%) invert(7%) 
+    sepia(33%) saturate(2005%) hue-rotate(220deg) brightness(96%) 
+    contrast(94%);
+
+    --body-bg: #F6F6F6;
+    --header-bg-color: #eee;
+    --top-act-group-bg-color: #fff;
+    --top-act-group-shadow: rgba(237, 237, 246, 0.20);
+    --top-act-group-saparate:#EDEDF6;
+
+    @include abstracts.breakpoint(lg) {
+        --header-bg-color: #fff;
+    }
+}
