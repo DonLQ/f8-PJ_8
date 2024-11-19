@@ -5,12 +5,11 @@ html.dark {
   --header-bg-color: #171C28;
   --top-act-group-bg-color: #292E39;
   --top-act-group-shadow: rgba(0, 0, 0, 0.20);
-  --top-act-group-saparate:#EDEDF6;
+  --top-act-group-separate:#EDEDF6;
   --dropdown-bg-color: #2F3441;
   --dropdown-shadow-color: rgba(23, 28, 40, 0.40);
   --dropdown-arrow-color: brightness(0) saturate(100%) invert(18%) sepia(25%) saturate(473%) hue-rotate(185deg) brightness(93%) contrast(90%);
   --top-menu-border-color: #171C28;
-  --menu-column-heading-color: #B9BABE;
   --menu-column-test-color:#B9BABE;
   --menu-column-icon-color: brightness(0) saturate(100%) invert(91%) sepia(49%) saturate(2190%) hue-rotate(180deg) brightness(116%) contrast(96%);
   --sidebar-bg:#292E39;
@@ -31,11 +30,10 @@ html {
   --header-bg-color: #eee;
   --top-act-group-bg-color: #fff;
   --top-act-group-shadow: rgba(237, 237, 246, 0.20);
-  --top-act-group-saparate:#EDEDF6;
+  --top-act-group-separate:#EDEDF6;
   --dropdown-bg-color: #fff;
   --dropdown-shadow-color: rgba(200, 200, 200, 0.40);
   --top-menu-border-color: #D2D1D6;
-  --menu-column-heading-color: #1A162E;
   --menu-column-test-color: #1A162E;
   --menu-column-icon-color: brightness(0) saturate(100%) invert(6%) sepia(28%) saturate(2531%) hue-rotate(222deg) brightness(98%) contrast(94%);
   --sidebar-bg:#fff;
