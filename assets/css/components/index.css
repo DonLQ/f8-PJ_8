@@ -71,6 +71,11 @@
     content: none;
   }
 }
+@media (max-width: 575.98px) {
+  .dropdown__inner {
+    padding: 0 20px;
+  }
+}
 
 .top-menu {
   --main-column-width: 292px;
@@ -111,7 +116,7 @@
 }
 @media (max-width: 1199.98px) {
   .menu-column__icon {
-    display: none;
+    display: block;
   }
 }
 @media (max-width: 991.98px) {

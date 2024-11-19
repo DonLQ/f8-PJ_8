@@ -45,6 +45,10 @@
                 content: none;
             }
         }
+
+        @include abstracts.breakpoint(sm) {
+            padding: 0 20px;
+        }
     }
 }
 
@@ -87,7 +91,7 @@
         height: 36px;
 
         @include abstracts.breakpoint(xl) {
-            display: none;
+            display: block;
         }
 
         @include abstracts.breakpoint(lg) {
