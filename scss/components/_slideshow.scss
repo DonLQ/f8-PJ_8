@@ -2,8 +2,6 @@
 
 .slideshow {
     position: relative;
-    margin: 40px 0;
-
 
     &__inner {
         display: flex;
@@ -18,7 +16,6 @@
 
         @include abstracts.screen(md) {
             padding-top: 50%;
-            line-height: 142.867%;
         }
 
     }
