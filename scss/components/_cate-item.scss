@@ -43,7 +43,7 @@
         flex-direction: column;
         justify-content: center;
         gap: 4px;
-        padding-right: 30px;
+        padding-right: 20px;
 
         @include abstracts.screen(xl) {
             padding-right: 0;

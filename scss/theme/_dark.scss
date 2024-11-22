@@ -30,4 +30,20 @@ html.dark {
     --cate-item-bg: #171C28;
     --cate-item-thumb-bg: #292E39;
     --cate-item-title-color: #fff;
+
+     // Button
+     --filter-btn-bg: #171C28;
+     --filter-btn-color: #fff;
+    --like-btn-bg: #292E39;
+    --like-btn-icon-hover: brightness(0) saturate(100%) invert(36%) sepia(99%) saturate(1729%) hue-rotate(337deg) brightness(109%) contrast(95%);
+ 
+     // Product card
+     --product-card-bg: #171C28;
+     --product-card-shadow: rgba(0, 0, 0, 0.20);
+
+     // Filter-form
+    --filter-form-bg: var(--dropdown-bg-color);
+    --filter-form-arrow: var(--filter-form-bg);
+    --filter-form-shadow: rgba(0, 0, 0, 0.40);
+    --filter-form-tag-bg: #171C28;
 }

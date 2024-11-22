@@ -22,7 +22,9 @@ html {
     --dropdown-shadow-color: rgba(200, 200, 200, 0.40);
     --top-menu-border-color: #D2D1D6;
     --menu-column-test-color: #1A162E;
-    --menu-column-icon-color: brightness(0) saturate(100%) invert(6%) sepia(28%) saturate(2531%) hue-rotate(222deg) brightness(98%) contrast(94%);
+    --menu-column-icon-color: brightness(0) saturate(100%) invert(6%) 
+    sepia(28%) saturate(2531%) hue-rotate(222deg) brightness(98%) 
+    contrast(94%);
 
     // Sidebar
     --sidebar-bg:#fff;
@@ -37,4 +39,20 @@ html {
         --cate-item-bg: #fff;
     }
 
+    // Button
+    --filter-btn-bg: #fff;
+    --filter-btn-color: #6C6C72;
+    --like-btn-bg:#fff;
+    --like-btn-icon-hover: brightness(0) saturate(100%) invert(36%) sepia(99%) saturate(1729%) hue-rotate(337deg) brightness(109%) contrast(95%);
+
+    // Product card
+    --product-card-bg: #fff;
+    --product-card-shadow: rgba(237, 237, 246, 0.20);
+
+    // Filter-form
+    --filter-form-bg: #fff;
+    --filter-form-arrow: var(--filter-form-bg);
+    --filter-form-shadow: rgba(200, 200, 200, 0.40);
+    --filter-form-tag-bg: #F8F8FB;
+    
 }
