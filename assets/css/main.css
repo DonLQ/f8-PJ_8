@@ -1429,7 +1429,7 @@ html.dark {
 }
 @media (max-width: 575.98px) {
   .navbar__list {
-    height: calc(100% - 124px);
+    height: calc(100% - 120px);
   }
 }
 .navbar__item:hover .dropdown {
@@ -1647,7 +1647,6 @@ html.dark {
 @media (max-width: 991.98px) {
   .top-menu__main {
     width: 100%;
-    height: auto;
     border-right: none;
   }
 }
@@ -1762,7 +1761,6 @@ html.dark {
 @media (max-width: 991.98px) {
   .sub-menu--not-main {
     grid-template-columns: 1fr;
-    height: auto;
   }
 }
 

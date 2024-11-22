@@ -66,7 +66,6 @@
 
         @include abstracts.screen(lg) {
             width: 100%;
-            height: auto;
             border-right: none;
         }
     }
@@ -194,7 +193,6 @@
 
         @include abstracts.screen(lg) {
             grid-template-columns: 1fr;
-            height: auto;
         }
     }
 }
