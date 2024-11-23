@@ -10,10 +10,6 @@
     background: var(--footer-bg-color);
     color: var(--text-color);
 
-    &__column {
-        // max-width: 254px;
-    }
-
     &__row {
         display: flex;
         align-items: flex-start ;
@@ -111,8 +107,7 @@
     }
 
     &__social {
-        margin-top: 20px;
-        padding: 20px 0 60px;
+        padding: 40px 0 60px;
         display: flex;
         align-items:center;
         justify-content:flex-end;
