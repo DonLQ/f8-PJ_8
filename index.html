@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,6 +28,7 @@
             load("#header", "./templates/header.html");
         </script>
 
+        <!-- Main Body -->
         <div class="container home">
             <!-- Slideshow -->
             <div class="home__container">
@@ -103,6 +104,7 @@
             <section class="home__container">
                 <div class="home__row">
                     <h2 class="home__heading">Total LavAzza 1320</h2>
+                    <!-- Filter button -->
                     <div class="filter-wrap">
                         <button class="filter-btn js-toggle" toggle-target="#home-filter">
                             Filter
@@ -113,6 +115,7 @@
                             <img src="./assets/icons/arrow-up.png" alt="" class="filter__arrow" />
                             <h3 class="filter__heading">Filter</h3>
                             <form action="" class="filter__form">
+                                <!-- Filter Value -->
                                 <div class="filter__row filter__content">
                                     <!-- Filter column 1 -->
                                     <div class="filter__col">
@@ -154,9 +157,7 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="filter__separate"></div>
-
                                     <!-- Filter column 2 -->
                                     <div class="filter__col">
                                         <label for="" class="filter__from-label">Size/Weight</label>
@@ -189,9 +190,7 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="filter__separate"></div>
-
                                     <!-- Filter column 3 -->
                                     <div class="filter__col">
                                         <label for="" class="filter__from-label">Brand</label>
@@ -220,6 +219,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- Button Result -->
                                 <div class="filter__row filter__footer">
                                     <button class="btn btn--text filter__cancel js-toggle" toggle-target="#home-filter">
                                         Cancel
@@ -235,7 +235,7 @@
                         </div>
                     </div>
                 </div>
-
+                <!-- Products List -->
                 <div class="row row-cols-4 row-cols-lg-2 row-cols-sm-1 g-3">
                     <!-- Product card 1 -->
                     <div class="col">
@@ -329,17 +329,322 @@
                             </div>
                         </article>
                     </div>
+                    <!-- Product card 5 -->
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-warp">
+                                <a href="#!">
+                                    <img src="./assets/img/products/product-5.png" alt="" class="product-card__thumb" />
+                                </a>
+                                <button class="like-btn product-card__like-btn">
+                                    <img src="./assets/icons/heart.svg" alt="" class="icon like-btn__icon" />
+                                    <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
+                                </button>
+                            </div>
+                            <h3 class="product-card__title">
+                                <a href="#!">Starbucks - Espresso Arabica and Robusta Beans</a>
+                            </h3>
+                            <p class="product-card__brand">Starbucks</p>
+                            <div class="product-card__row">
+                                <span class="product-card__price">$60.00</span>
+                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                                <span class="product-card__score">4.5</span>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Product card 6 -->
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-warp">
+                                <a href="#!">
+                                    <img src="./assets/img/products/product-6.png" alt="" class="product-card__thumb" />
+                                </a>
+                                <button class="like-btn like-btn--liked product-card__like-btn">
+                                    <img src="./assets/icons/heart.svg" alt="" class="icon like-btn__icon" />
+                                    <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
+                                </button>
+                            </div>
+                            <h3 class="product-card__title">
+                                <a href="#!">Costa Coffee - Caffè Espresso - Ground Coffee</a>
+                            </h3>
+                            <p class="product-card__brand">Costa Coffee</p>
+                            <div class="product-card__row">
+                                <span class="product-card__price">$159.99</span>
+                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                                <span class="product-card__score">5.0</span>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Product card 7 -->
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-warp">
+                                <a href="#!">
+                                    <img src="./assets/img/products/product-7.png" alt="" class="product-card__thumb" />
+                                </a>
+                                <button class="like-btn like-btn--liked product-card__like-btn">
+                                    <img src="./assets/icons/heart.svg" alt="" class="icon like-btn__icon" />
+                                    <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
+                                </button>
+                            </div>
+                            <h3 class="product-card__title">
+                                <a href="#!">
+                                    Lavazza Gran Espresso Coffee Beans is one of Lavazza's favorite coffee bags in the
+                                    first months of 2022. With a special combination of Arabica beans and Robusta beans,
+                                    it creates a rich coffee suitable for customers who love Espresso.</a
+                                >
+                            </h3>
+                            <p class="product-card__brand">Lavazza</p>
+                            <div class="product-card__row">
+                                <span class="product-card__price">$86.90</span>
+                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                                <span class="product-card__score">4.5</span>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Product card 8 -->
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-warp">
+                                <a href="#!">
+                                    <img src="./assets/img/products/product-8.png" alt="" class="product-card__thumb" />
+                                </a>
+                                <button class="like-btn product-card__like-btn">
+                                    <img src="./assets/icons/heart.svg" alt="" class="icon like-btn__icon" />
+                                    <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
+                                </button>
+                            </div>
+                            <h3 class="product-card__title">
+                                <a href="#!">Peet's Coffee- Espresso Coffee Beans</a>
+                            </h3>
+                            <p class="product-card__brand">Peet's Coffee</p>
+                            <div class="product-card__row">
+                                <span class="product-card__price">$38.65</span>
+                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                                <span class="product-card__score">4.4</span>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Product card 9 -->
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-warp">
+                                <a href="#!">
+                                    <img src="./assets/img/products/product-9.png" alt="" class="product-card__thumb" />
+                                </a>
+                                <button class="like-btn product-card__like-btn">
+                                    <img src="./assets/icons/heart.svg" alt="" class="icon like-btn__icon" />
+                                    <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
+                                </button>
+                            </div>
+                            <h3 class="product-card__title">
+                                <a href="#!">Nescafe - Instant Coffee Arabica and Robusta Beans</a>
+                            </h3>
+                            <p class="product-card__brand">Nescafe</p>
+                            <div class="product-card__row">
+                                <span class="product-card__price">$45.00</span>
+                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                                <span class="product-card__score">3.3</span>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Product card 10 -->
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-warp">
+                                <a href="#!">
+                                    <img
+                                        src="./assets/img/products/product-10.png"
+                                        alt=""
+                                        class="product-card__thumb"
+                                    />
+                                </a>
+                                <button class="like-btn product-card__like-btn">
+                                    <img src="./assets/icons/heart.svg" alt="" class="icon like-btn__icon" />
+                                    <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
+                                </button>
+                            </div>
+                            <h3 class="product-card__title">
+                                <a href="#!">Gloria Jean's Coffee Blends - Italian Espresso</a>
+                            </h3>
+                            <p class="product-card__brand">Gloria Jean's</p>
+                            <div class="product-card__row">
+                                <span class="product-card__price">$63.00</span>
+                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                                <span class="product-card__score">3.9</span>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Product card 11 -->
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-warp">
+                                <a href="#!">
+                                    <img
+                                        src="./assets/img/products/product-11.png"
+                                        alt=""
+                                        class="product-card__thumb"
+                                    />
+                                </a>
+                                <button class="like-btn like-btn--liked product-card__like-btn">
+                                    <img src="./assets/icons/heart.svg" alt="" class="icon like-btn__icon" />
+                                    <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
+                                </button>
+                            </div>
+                            <h3 class="product-card__title">
+                                <a href="#!">Tim Horton's - Caffè Espresso Black Tin - Ground coffee</a>
+                            </h3>
+                            <p class="product-card__brand">Tim Horton's</p>
+                            <div class="product-card__row">
+                                <span class="product-card__price">$79.99</span>
+                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                                <span class="product-card__score">4.8</span>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Product card 12 -->
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-warp">
+                                <a href="#!">
+                                    <img
+                                        src="./assets/img/products/product-12.png"
+                                        alt=""
+                                        class="product-card__thumb"
+                                    />
+                                </a>
+                                <button class="like-btn product-card__like-btn">
+                                    <img src="./assets/icons/heart.svg" alt="" class="icon like-btn__icon" />
+                                    <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
+                                </button>
+                            </div>
+                            <h3 class="product-card__title">
+                                <a href="#!">Dunkin - Espresso Coffee Beans</a>
+                            </h3>
+                            <p class="product-card__brand">Dunkin</p>
+                            <div class="product-card__row">
+                                <span class="product-card__price">$30.65</span>
+                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                                <span class="product-card__score">2.4</span>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Product card 13 -->
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-warp">
+                                <a href="#!">
+                                    <img
+                                        src="./assets/img/products/product-13.png"
+                                        alt=""
+                                        class="product-card__thumb"
+                                    />
+                                </a>
+                                <button class="like-btn like-btn--liked product-card__like-btn">
+                                    <img src="./assets/icons/heart.svg" alt="" class="icon like-btn__icon" />
+                                    <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
+                                </button>
+                            </div>
+                            <h3 class="product-card__title">
+                                <a href="#!">Patch Roast - Espresso Arabica</a>
+                            </h3>
+                            <p class="product-card__brand">Patch Roast</p>
+                            <div class="product-card__row">
+                                <span class="product-card__price">$40.00</span>
+                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                                <span class="product-card__score">4.3</span>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Product card 14 -->
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-warp">
+                                <a href="#!">
+                                    <img
+                                        src="./assets/img/products/product-14.png"
+                                        alt=""
+                                        class="product-card__thumb"
+                                    />
+                                </a>
+                                <button class="like-btn product-card__like-btn">
+                                    <img src="./assets/icons/heart.svg" alt="" class="icon like-btn__icon" />
+                                    <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
+                                </button>
+                            </div>
+                            <h3 class="product-card__title">
+                                <a href="#!">Classico Coffee Blends - Try the Italian Espresso</a>
+                            </h3>
+                            <p class="product-card__brand">Classico</p>
+                            <div class="product-card__row">
+                                <span class="product-card__price">$23.00</span>
+                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                                <span class="product-card__score">3.4</span>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Product card 15 -->
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-warp">
+                                <a href="#!">
+                                    <img
+                                        src="./assets/img/products/product-15.png"
+                                        alt=""
+                                        class="product-card__thumb"
+                                    />
+                                </a>
+                                <button class="like-btn product-card__like-btn">
+                                    <img src="./assets/icons/heart.svg" alt="" class="icon like-btn__icon" />
+                                    <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
+                                </button>
+                            </div>
+                            <h3 class="product-card__title">
+                                <a href="#!">Pure Coffee - Experience Taste At First Step</a>
+                            </h3>
+                            <p class="product-card__brand">IMCcoffee</p>
+                            <div class="product-card__row">
+                                <span class="product-card__price">$9.99</span>
+                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                                <span class="product-card__score">2.0</span>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Product card 16 -->
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-warp">
+                                <a href="#!">
+                                    <img
+                                        src="./assets/img/products/product-16.png"
+                                        alt=""
+                                        class="product-card__thumb"
+                                    />
+                                </a>
+                                <button class="like-btn product-card__like-btn">
+                                    <img src="./assets/icons/heart.svg" alt="" class="icon like-btn__icon" />
+                                    <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
+                                </button>
+                            </div>
+                            <h3 class="product-card__title">
+                                <a href="#!">Tata Coffee Grand Classic Instant Coffee</a>
+                            </h3>
+                            <p class="product-card__brand">Tata Coffee</p>
+                            <div class="product-card__row">
+                                <span class="product-card__price">$8.65</span>
+                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                                <span class="product-card__score">2.4</span>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </section>
-
-            <!-- Main -->
-            <h1>Home page</h1>
-
-            <!-- Footer -->
-            <footer id="footer"></footer>
-            <script>
-                load("#footer", "./templates/footer.html");
-            </script>
         </div>
+
+        <!-- Footer -->
+        <footer id="footer" class="footer"></footer>
+        <script>
+            load("#footer", "./templates/footer.html");
+        </script>
     </body>
 </html>

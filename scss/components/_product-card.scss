@@ -6,6 +6,8 @@
 
     &__img-warp {
         position: relative;
+        // width: 280px;
+        // height: 284px;
         padding-top: 100%;
     }
 
@@ -26,7 +28,13 @@
 
 
     &__title {
-        margin-top: 16px; 
+        margin-top: 16px;
+        width: 100%;
+        min-height: 50px; 
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
     &__title, &__price, &__score {

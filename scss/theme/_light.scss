@@ -54,5 +54,11 @@ html {
     --filter-form-arrow: var(--filter-form-bg);
     --filter-form-shadow: rgba(200, 200, 200, 0.40);
     --filter-form-tag-bg: #F8F8FB;
+
+    // Footer
+    --footer-bg-color: var(--header-bg-color);
+    --footer-input-email: var(--filter-btn-color);
+    --footer-link-hover: #000;
+    --footer-desc-small: #bdbdbe;
     
 }

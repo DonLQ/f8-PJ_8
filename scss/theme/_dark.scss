@@ -46,4 +46,10 @@ html.dark {
     --filter-form-arrow: var(--filter-form-bg);
     --filter-form-shadow: rgba(0, 0, 0, 0.40);
     --filter-form-tag-bg: #171C28;
+
+    // Footer
+    --footer-bg-color: var(--header-bg-color);
+    --footer-input-email: var(--filter-btn-color);
+    --footer-link-hover: #FFB700;
+    --footer-desc-small: #71747a;
 }
