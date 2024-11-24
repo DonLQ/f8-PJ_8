@@ -1,118 +1,224 @@
 @use "../abstracts";
 
-.container {
-    width: 1370px;
-}
-
 .footer {
     height: auto;
     margin-top: 40px;
+    padding: 40px 0;
     background: var(--footer-bg-color);
     color: var(--text-color);
 
-    &__row {
-        display: flex;
-        align-items: flex-start ;
-        gap: 60px;
-        padding: 40px 0 20px;
+    @include abstracts.screen(md) {
+        padding: 40px 0;
     }
 
-    &__infor {
-        width: 100%;
+    &__row {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 40px;
 
-        &-content {
-            width: 100%;
-            max-height: 50px;
-            margin-top: 30px;
+        @include abstracts.screen(xl) {
+            gap: 30px;
+        }
 
-            font-size: 1.2rem;
-            font-weight: 400;
+        @include abstracts.screen(lg) {
+            flex-direction: column;
+            padding: 0 20px;
+
+        }
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+
+        @include abstracts.screen(lg) {
+            font-size: 2.8rem
+        }
+
+
+        &-img {
+            @include abstracts.screen(xl) {
+                width: 32px;
+            }
+        }
+
+        &-title {
+            font-size: 2.2rem;
+            font-weight: 700;
             line-height: 145.455%;
 
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        &-updates {
-            margin-top: 30px;
-            font-size: 1.4rem;
-            font-weight: 400;
-            line-height: 145.455%; 
-        }
-
-        &-email {
-            display: flex;
-            align-items: center;
-            margin-top: 20px;
-            gap: 10px;
-        }
-
-        &-address {
-            width: 100%;
-            height: 46px;
-            padding: 0 20px;
-            background: var(--footer-bg-color);
-            font-size: 1.2rem;
-            font-weight: 400;
-            border-radius: 6px;
-            border: 1px solid var(--footer-input-email);
+            @include abstracts.screen(lg) {
+                font-size: 2.8rem;
+            }
         }
     }
 
     &__menu {
-        width: 70%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 40px;
 
-        &-heading {
-            font-size: 1.8rem;
-            font-weight: 600;
-            line-height: 145.455%; 
+        @include abstracts.screen(lg) {
+            display: grid;
+            justify-content: center;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px 20px;
         }
 
-        &-list {
-            margin-top: 20px;
+        @include abstracts.screen(sm) {
+            grid-template-columns: repeat(1, 1fr);
         }
 
-        &-item {
-            margin-top: 10px;
+        
+    }
 
-            font-size: 1.5rem;
-            font-weight: 400;
-            line-height: 150%;
+    &__col {
+        width: 50%;
 
-            &-link:hover {
-                font-weight: 600;
-                color: var(--footer-link-hover);
+        @include abstracts.screen(xl) {
+            width: 20%;
+        }
+
+        @include abstracts.screen(lg) {
+            width: 100%;
+        }
+
+        &-infor {
+            width: 22%;
+
+            @include abstracts.screen(xl) {
+                width: 30%;
             }
-        }
 
-        &-desc {
-            margin-top: 5px;
-            font-size: 1.4rem;
-            font-weight: 400;
-            line-height: 150%;
-
-            &--bold {
-                font-size: 1.2rem;
-                font-weight: 500;
-            }
-
-            &--small {
-                font-size: 1.1rem;
-                font-weight: 400;
-                color: var(--footer-desc-small);
+            @include abstracts.screen(lg) {
+                width: 100%;
             }
         }
     }
 
+    &__col + &__col {
+        @include abstracts.screen(lg) {
+            flex-direction: row;
+        }
+    }
+
+    &__content {
+        width: 100%t;
+        margin-top: 30px;
+
+        font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 145.455%;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+
+        @include abstracts.screen(lg) {
+            height: auto;
+            font-size: 1.8rem;
+            -webkit-box-orient: unset;
+        }
+    }
+
+    &__updates {
+        margin: 30px 0;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 145.455%; 
+
+        @include abstracts.screen(xl) {
+            margin: 20px 0;
+        }
+
+        @include abstracts.screen(lg) {
+            margin: 20px 0;
+        }
+    }
+
+    &__from {
+        display: flex;
+        margin-top: 20px;
+        gap: 10px;
+
+        @include abstracts.screen(xl) {
+            flex-direction: column;
+        }
+       
+    }
+
+    &__address {
+        width: 100%;
+        height: 46px;
+        padding: 0 20px;
+        background: var(--footer-bg-color);
+        font-size: 1.2rem;
+        font-weight: 400;
+        border-radius: 6px;
+        border: 1px solid var(--footer-input-email);
+    }
+
+    &__heading {
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 145.455%; 
+        margin-bottom: 20px;
+    }
+
+    &__item {
+        margin-top: 10px;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 150%;
+    }
+    
+    &__link:hover {
+        color: var(--footer-link-hover);
+    }
+    
+    &__desc {
+        margin-top: 5px;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 150%;
+
+        &--bold {
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+
+        &--small {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--footer-desc-small);
+        }
+    }
+
     &__social {
-        padding: 40px 0 60px;
+        padding: 40px 0;
         display: flex;
         align-items:center;
         justify-content:flex-end;
         gap: 20px;
-        
+
+        @include abstracts.screen(lg) {
+            justify-content: flex-start;
+            padding: 40px 20px 0;
+        }
+
+        @include abstracts.screen(md) {
+            justify-content: flex-start;
+        }
+
+        @include abstracts.screen(sm) {
+            justify-content: center;
+            scale: 90%;
+            padding: 40px 20px 0;
+        }
 
         &-icon {
             width: 40px;
