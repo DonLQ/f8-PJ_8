@@ -61,8 +61,12 @@ html {
     --footer-link-hover: #000;
     --footer-desc-small: #bdbdbe;
 
-    // Sign Up
+    // Auth
     --auth-content-bg: #fff;
+
+    @include abstracts.screen(md) {
+        --auth-intro-bg: #fff;
+    }
 
     // Form
     --from-text-input: #D2D1D6;
