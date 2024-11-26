@@ -1,0 +1,143 @@
+@use "../abstracts";
+
+.form {
+    &__group {
+        margin-top: 30px;
+
+        &--inline {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__text-input {
+        display: flex;
+        align-items: center;
+        height: 50px;
+        padding: 0 12px;
+        border-radius: 10px;
+        border: 1px solid var(--from-text-input);
+
+        &:focus-within {
+            border-color: #77DAE6;
+        }
+
+        @include abstracts.screen(md) {
+            height: 48px;
+        }
+    }
+
+    &__pull-right {
+        margin-left: auto;
+    }
+
+    &__checkbox {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        user-select: none;
+
+        &-label {
+            margin-left: 29px;
+            color: #9E9DA8;
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 146.667%;
+
+            @include abstracts.screen(md) {
+                font-size: 1.4rem;
+            }
+        }
+
+        &::before, &::after {
+            content: "";
+            position: absolute;
+        }
+
+        &::before {
+            width: 19px;
+            height: 19px;
+            border-radius: 5px;
+            border: 1.5px solid #9E9DA8;
+        }
+    }
+}
+
+.from__input {
+    flex: 1;
+    height: 100%;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 144.444%;
+
+    &::placeholder {
+        color: var(--from-text-input);
+    }
+
+    @include abstracts.screen(md) {
+        font-size: 1.6rem;
+    }
+}
+
+.form__input-icon {
+    margin-left: 12px;
+    width: 24px;
+    height: 24px;
+}
+
+.form {
+    &:has(:invalid) &__submit-btn {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &__error {
+        text-align: left;
+        font-size: 1.4rem;
+        font-weight: 500;
+        margin-top: 10px;
+        color: red;
+        display: none;
+    }
+    
+    &__input-icon-error {
+        display: none;
+        width: 24px;
+        height: 24px;
+        margin-left: 12px;
+        animation: shake 0.9s;
+    }
+}
+
+.form__group:has(:invalid):has(.from__input:not(:placeholder-shown)) {
+    .form__text-input {
+        border-color: red;
+        background: rgba($color: red, $alpha: 0.1);
+    }
+
+    .form__error, .form__input-icon-error {
+        display: block;
+    }
+
+    .form__input-icon {
+        display: none;
+    }
+}
+
+.form__checkbox:has(:checked) {
+    &::before {
+        border-color: #FFB700 ;
+        background: #FFB700;
+    }
+
+    &::after {
+        width: 12px;
+        height: 8px;
+        border: 2px solid;
+        border-color: transparent transparent #fff #fff;
+        rotate: -45deg;
+        left: 3px;
+        top: 4px;
+    }
+}
