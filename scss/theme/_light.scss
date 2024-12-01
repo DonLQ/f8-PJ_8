@@ -17,6 +17,12 @@ html {
         --header-shadow-color: rgba(237, 237, 246, 0.20);
     }
 
+    // Header action Dropdown
+    --act-dropdown-bg: #fff;
+    --act-dropdown-shadow: rgba(200, 200, 200, 0.40);
+    --act-bottom-border-color: #D2D1D6;
+    --cart-preview-item-img-wrap-border: #ebebee;
+
     // Dropdown
     --dropdown-bg-color: #fff;
     --dropdown-shadow-color: rgba(200, 200, 200, 0.40);
@@ -101,5 +107,8 @@ html {
 
     // Test content
     --tex-content-hr-bg: #ebebeb;
+
+    
+    
 
 }
