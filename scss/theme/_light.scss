@@ -109,6 +109,15 @@ html {
     --tex-content-hr-bg: #ebebeb;
 
     
-    
+    // Checkout
+    --checkout-breadcrumbs-bg:#fff;
+    --checkout-cart-info-bg: #fff;
+    --checkout-cart-info-shadow: rgba(237, 237, 246, 0.20);
+    --checkout-cart-item-border: #D2D1D6;
+    --checkout-cart-info-separate: #D2D1D6;
+    --checkout-text-color: #1A162E;
+    --checkout-icon: brightness(0) saturate(100%) invert(9%) sepia(26%) saturate(1204%) hue-rotate(210deg) brightness(96%) contrast(99%);
+    --gift-item-icon-wrap-bg: rgba(118, 68, 225, 0.1); 
+    --gift-item-icon-wrap-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.20);
 
 }

@@ -87,4 +87,17 @@ html.dark {
 
     // Test content
     --tex-content-hr-bg: #2e3647;
+
+     // Checkout
+     --checkout-breadcrumbs-bg:#171C28;
+     --checkout-cart-info-bg: #171C28;
+     --checkout-cart-info-shadow: rgba(23, 28, 40, 0.20);
+     --checkout-cart-item-border: #292E39;
+     --checkout-cart-info-separate: #292E39;
+     --checkout-text-color: #B9BABE;
+     --checkout-icon: brightness(0) saturate(100%) invert(86%) sepia(3%) saturate(300%) hue-rotate(191deg) brightness(88%) contrast(88%);
+     --gift-item-icon-wrap: #292E39;
+
+
+
 }

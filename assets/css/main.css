@@ -1315,6 +1315,15 @@ html {
   --prod-tab-current-color: #1A162E;
   --review-card-bg: #FAFAFD;
   --tex-content-hr-bg: #ebebeb;
+  --checkout-breadcrumbs-bg:#fff;
+  --checkout-cart-info-bg: #fff;
+  --checkout-cart-info-shadow: rgba(237, 237, 246, 0.20);
+  --checkout-cart-item-border: #D2D1D6;
+  --checkout-cart-info-separate: #D2D1D6;
+  --checkout-text-color: #1A162E;
+  --checkout-icon: brightness(0) saturate(100%) invert(9%) sepia(26%) saturate(1204%) hue-rotate(210deg) brightness(96%) contrast(99%);
+  --gift-item-icon-wrap-bg: rgba(118, 68, 225, 0.1);
+  --gift-item-icon-wrap-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.20);
 }
 @media (max-width: 991.98px) {
   html {
@@ -1398,6 +1407,14 @@ html.dark {
   --prod-tab-current-color: var(--text-color);
   --review-card-bg: #171C28;
   --tex-content-hr-bg: #2e3647;
+  --checkout-breadcrumbs-bg:#171C28;
+  --checkout-cart-info-bg: #171C28;
+  --checkout-cart-info-shadow: rgba(23, 28, 40, 0.20);
+  --checkout-cart-item-border: #292E39;
+  --checkout-cart-info-separate: #292E39;
+  --checkout-text-color: #B9BABE;
+  --checkout-icon: brightness(0) saturate(100%) invert(86%) sepia(3%) saturate(300%) hue-rotate(191deg) brightness(88%) contrast(88%);
+  --gift-item-icon-wrap: #292E39;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -3570,6 +3587,266 @@ html.dark {
   .prod-review__heading {
     font-size: 1.8rem;
   }
+}
+
+.checkout-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+  padding-bottom: 50px;
+}
+.checkout-page__breadcrumbs {
+  background: var(--checkout-breadcrumbs-bg);
+}
+
+.checkout-container {
+  margin-top: 30px;
+}
+@media (max-width: 767.98px) {
+  .checkout-container {
+    margin-top: 20px;
+  }
+}
+
+.cart-info {
+  padding: 30px;
+  border-radius: 20px;
+  background: var(--checkout-cart-info-bg);
+  box-shadow: 0px 20px 60px 10px var(--checkout-cart-info-shadow);
+  color: var(--text-color);
+}
+@media (max-width: 767.98px) {
+  .cart-info {
+    padding: 16px;
+  }
+}
+.cart-info__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+@media (max-width: 767.98px) {
+  .cart-info__list {
+    gap: 20px;
+  }
+}
+.cart-info__bottom {
+  margin-top: 30px;
+}
+.cart-info__continue-link, .cart-info__row {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+  color: var(--checkout-text-color);
+}
+.cart-info__continue {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+}
+.cart-info__continue-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cart-info__continue-icon {
+  rotate: 90deg;
+  filter: var(--checkout-icon);
+  transition: translate 0.3s;
+}
+.cart-info__continue-link:hover .cart-info__continue-icon {
+  translate: -5px;
+}
+.cart-info__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.cart-info__row-bold {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 145.455%;
+}
+.cart-info__separate {
+  margin: 30px 0;
+  height: 1px;
+  background: var(--checkout-cart-info-separate);
+}
+.cart-info__sub-label {
+  font-weight: 400;
+}
+.cart-info__value {
+  font-weight: 700;
+}
+.cart-info__checkout-btn {
+  margin-top: 30px;
+}
+
+.cart-info + .cart-info {
+  margin-top: 30px;
+}
+
+.cart-item {
+  display: flex;
+  gap: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--checkout-cart-item-border);
+}
+@media (max-width: 767.98px) {
+  .cart-item {
+    gap: 10px;
+    padding-bottom: 20px;
+  }
+  .cart-item:last-child {
+    border: none;
+  }
+}
+.cart-item__thumb {
+  width: 172px;
+  height: 172px;
+  object-fit: contain;
+}
+@media (max-width: 1399.98px) {
+  .cart-item__thumb {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (max-width: 991.98px) {
+  .cart-item__thumb {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (max-width: 767.98px) {
+  .cart-item__thumb {
+    width: 80px;
+    height: 80px;
+  }
+}
+.cart-item__content {
+  flex: 1;
+  display: flex;
+  align-self: flex-start;
+}
+@media (max-width: 991.98px) {
+  .cart-item__content {
+    flex-direction: column;
+  }
+}
+.cart-item__content-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: var(--checkout-text-color);
+}
+.cart-item__content-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+@media (max-width: 991.98px) {
+  .cart-item__content-right {
+    gap: 8px;
+    margin-top: 16px;
+    align-items: flex-start;
+  }
+}
+.cart-item__title {
+  width: 80%;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+@media (max-width: 767.98px) {
+  .cart-item__title {
+    width: 100%;
+  }
+}
+.cart-item__price-wrap {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+  color: #9E9DA8;
+}
+.cart-item__status {
+  color: #67B044;
+}
+.cart-item__ctrl {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 767.98px) {
+  .cart-item__ctrl--md-block {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+.cart-item__ctrl-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 44px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 150%;
+  color: #9E9DA8;
+}
+.cart-item__input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 10px;
+  border: 1px solid #fff;
+}
+.cart-item__input-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cart-item__total-price {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 145.455%;
+  color: var(--checkout-text-color);
+}
+.cart-item__icon {
+  filter: var(--checkout-icon);
+}
+
+.gift-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.gift-item__icon-wrap {
+  padding: 10px;
+  border-radius: 14px;
+  background: var(--gift-item-icon-wrap-bg);
+}
+.gift-item__content {
+  color: var(--checkout-text-color);
+}
+.gift-item__title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.gift-item__desc {
+  margin-top: 10px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 142.857%;
 }
 
 /*# sourceMappingURL=main.css.map */
