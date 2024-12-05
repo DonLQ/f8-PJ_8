@@ -25,7 +25,7 @@
         white-space: nowrap;
 
         font-size: 1.6rem;
-        font-weight: 500;
+        font-weight: 400;
         line-height: 150%;
         color: #9E9DA8;
 
@@ -34,6 +34,7 @@
           }
 
         &--current {
+          font-weight: 600;
             color: inherit;
         }
     }

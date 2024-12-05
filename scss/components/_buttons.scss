@@ -59,7 +59,11 @@
 
     &--small {
         height: 40px;
-        padding: 0 16px;
+    }
+
+    &--danger {
+        color: var(--button-danger-color, #fff);
+        background: #ed4337;
     }
 
     + .btn {
