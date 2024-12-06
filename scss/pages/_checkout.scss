@@ -290,13 +290,26 @@
     }
 }
 
-// Shipping
+// Shipping - Payment
 .cart-info {
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
 
     &__heading {
         font-size: 2.4rem;
         font-weight: 700;
         line-height: 141.667%;
+
+        &--lv2 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 144.444%;
+        }
     }
 
     &__sub-heading {
@@ -304,6 +317,50 @@
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 144.444%; 
+    }
+
+    &__desc {
+        margin-top: 6px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+    }
+
+    &__form {
+        margin-bottom: 30px;
+    }
+
+    &__form-row {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    &__edit-btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 144.444%; 
+    }
+
+    &__checkbox {
+        &-input {
+            appearance: none;
+
+            &::before {
+                content: url("../icons/checkbox-uncheck.svg");
+            }
+
+            &:not(:checked)::before {
+                filter: var(--icon-color);
+            }
+
+            &:checked::before {
+                content: url("../icons/checkbox-checked.svg");
+            }
+        }
     }
 }
 
@@ -375,14 +432,6 @@
         gap: 16px;
     }
 
-    &__choose {
-
-    }
-
-    &__info {
-
-    }
-
     &__title {
         font-size: 1.8rem;
         font-weight: 500;
@@ -422,41 +471,126 @@
         }
     }
 
-    &__right {
-
-    }
-
     &__ctrl {
         height: 100%;
         display: flex;
         align-self: flex-end;
+    }
+}
 
-        &-btn { 
-            display: flex;
-            align-items: center;
-            gap: 10px;
+.payment-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 
-            font-size: 1.8rem;
-            font-weight: 500;
-            line-height: 144.444%; 
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    background: var(--payment-item-bg);
+
+    @include abstracts.screen(sm) { 
+        align-items: flex-start;
+    }
+
+    &--poiter {
+        cursor: pointer;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+
+        gap: 20px;
+        flex: 1;
+
+        @include abstracts.screen(sm) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
         }
     }
 
-    &__checkbox {
-        &-input {
-            appearance: none;
+    &__info {
+        flex: 1;
+    }
 
-            &::before {
-                content: url("../icons/checkbox-uncheck.svg");
-            }
+    &__title, &__cost {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%; 
+    }
 
-            &:not(:checked)::before {
-                filter: var(--icon-color);
-            }
+    &__desc {
+        margin-top: 4px;
+    }
 
-            &:checked::before {
-                content: url("../icons/checkbox-checked.svg");
-            }
+    &__desc, &__detial {
+        font-size: 1.5rem; 
+        font-weight: 400;
+        line-height: 146.667%;
+    }
+
+    &__detial {
+        opacity: 0;
+        visibility: hidden;
+
+        padding: 10px 0 10px 10px;
+        text-decoration: underline;
+        color: #0071dc; 
+
+        @include abstracts.screen(md) {
+            opacity: 1;
+            visibility: visible;
         }
+    }
+
+    &__icon {
+        width: 20px;
+        @include abstracts.screen(md) {
+            visibility: hidden;
+        }
+    }
+
+    &__view {
+        display: flex;
+        align-items:center;
+        translate: 75px;
+
+        transition: opacity, visibility, translate, display;
+        transition-duration: 0.5s;
+
+        @include abstracts.screen(md) {
+            translate: 0;
+        }
+    }
+
+    &__view:hover {
+        translate: 0;
+    }
+
+    &__view:hover &__detial {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__thumb {
+        width: 70px;
+        height: 54px;
+        object-fit: cover;
+    }
+
+    &__cost {
+        color: #9E9DA8;
+    }
+
+    &__checkbox {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        gap: 14px;
+    }
+
+    &__checkbox-input:checked + &__cost {
+        color: inherit;
     }
 }
