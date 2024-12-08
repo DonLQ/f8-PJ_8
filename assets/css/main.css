@@ -128,6 +128,12 @@ b, strong {
   font-weight: 600;
 }
 
+.separate {
+  margin: var(--margin) 0;
+  height: 1px;
+  background: var(--separate-color);
+}
+
 .row > *, .container-fluid, .container {
   padding-left: calc(var(--grid-gutter-x) * 0.5);
   padding-right: calc(var(--grid-gutter-x) * 0.5);
@@ -1341,6 +1347,14 @@ html {
   --dialog-shadow: rgba(237, 237, 246, 0.20);
   --dialog-option-hover: #ededee;
   --payment-item-bg: #F6F6F6;
+  --profile-sidebar-bg: #fff;
+  --profile-sidebar-shadow: rgba(237, 237, 246, 0.20);
+  --profile-user-name-color: #fff;
+  --add-new-card-color: #D2D1D6;
+  --profile-link-hover:#ebebeb;
+  --account-info-bg: #F6F6F6;
+  --account-info-icon-bg: #fff;
+  --separate-color: #D2D1D6;
 }
 @media (max-width: 991.98px) {
   html {
@@ -1436,6 +1450,13 @@ html.dark {
   --dialog-shadow: rgba(23, 28, 40, 0.40);
   --dialog-option-hover: #676767;
   --payment-item-bg: #292E39;
+  --profile-sidebar-bg: #171C28;
+  --profile-sidebar-shadow: rgba(23, 28, 40, 0.20);
+  --add-new-card-color: #B9BABE;
+  --profile-link-hover:#313442;
+  --account-info-bg: #292E39;
+  --account-info-icon-bg: #171C28;
+  --separate-color: #292E39;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -3356,6 +3377,174 @@ html.dark {
   }
 }
 
+.payment-card {
+  position: relative;
+  z-index: 0;
+  height: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  background: var(--bg-color);
+  color: #fff;
+  overflow: hidden;
+  user-select: none;
+}
+.payment-card__img {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  pointer-events: none;
+}
+.payment-card__top {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.payment-card__type {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 142.857%;
+}
+.payment-card__number {
+  margin-top: 37px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.payment-card__bottom {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.payment-card__label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 175%;
+}
+.payment-card__value {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 140%;
+}
+.payment-card__expired {
+  margin: 0 auto 0 40px;
+}
+.payment-card__brand {
+  --brand-width: 28px;
+  position: relative;
+  width: 42px;
+  height: var(--brand-width);
+}
+.payment-card__brand::before, .payment-card__brand::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: var(--brand-width);
+  height: var(--brand-width);
+  border-radius: 50%;
+}
+.payment-card__brand::before {
+  left: 0;
+  z-index: 1;
+  background: #F94545;
+  mix-blend-mode: hard-light;
+}
+.payment-card__brand::after {
+  right: 0;
+  background: #FFB700;
+}
+
+.new-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  height: 100%;
+  min-height: 170px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px dashed #D2D1D6;
+  background: transparent;
+}
+.new-card__icon {
+  width: 24px;
+}
+.new-card__text {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 142.857%;
+  color: var(--add-new-card-color);
+}
+
+.account-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--account-info-bg);
+}
+.account-info__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 54px;
+  height: 54px;
+  border-radius: 8px;
+  background: var(--account-info-icon-bg);
+}
+.account-info__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.account-info__desc {
+  margin-top: 6px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 142.857%;
+}
+
+.favourite-item {
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+  gap: 20px;
+}
+.favourite-item__thumb {
+  width: 110px;
+}
+@media (max-width: 991.98px) {
+  .favourite-item__thumb {
+    width: 80px;
+  }
+}
+.favourite-item__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.favourite-item__content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+@media (max-width: 575.98px) {
+  .favourite-item__content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+.favourite-item__price {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 145.455%;
+}
+
 .home {
   margin-bottom: 50px;
 }
@@ -4413,6 +4602,85 @@ html.dark {
 }
 .payment-item__checkbox-input:checked + .payment-item__cost {
   color: inherit;
+}
+
+.profile-container {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.profile__sidebar {
+  padding-bottom: 30px;
+  border-radius: 20px;
+  background: var(--profile-sidebar-bg);
+  box-shadow: 0px 20px 60px 10px var(--profile-sidebar-shadow);
+  overflow: hidden;
+}
+.profile__desc {
+  margin-bottom: 16px;
+}
+.profile-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px 20px;
+  background: linear-gradient(180deg, rgba(26, 22, 46, 0) 0%, #1A162E 100%), url("../img/profile/cover.png") no-repeat center/cover;
+  box-shadow: 0px 20px 60px 10px var(--profile-sidebar-shadow);
+  color: var(--profile-user-name-color);
+}
+.profile-user__avatar {
+  width: 121px;
+  height: 121px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  background: #ccc content-box;
+  box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.08);
+}
+.profile-user__name {
+  margin-top: 15px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 144.444%;
+}
+.profile-user__desc {
+  margin-top: 2px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.profile-menu {
+  margin-top: 30px;
+  padding: 0 30px;
+}
+.profile-menu__title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.profile-menu__list {
+  margin-top: 11px;
+}
+.profile-menu__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 32px;
+  padding: 0 5px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 146.667%;
+  transition: background-color 0.2;
+}
+.profile-menu__link:hover {
+  background: var(--profile-link-hover);
+}
+.profile-menu__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
