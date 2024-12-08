@@ -1324,7 +1324,7 @@ html {
   --footer-link-hover: #000;
   --footer-desc-small: #bdbdbe;
   --auth-content-bg: #fff;
-  --form-text-input: #9E9DA8;
+  --form-text-input: #D2D1D6;
   --form-tag-bg: #EDEDF6;
   --product-detail-bg: #fff;
   --prod-info-bg: #fff;
@@ -4346,7 +4346,15 @@ html.dark {
   justify-content: space-between;
   gap: 20px;
 }
+.cart-info__back-arrow {
+  width: 40px;
+  padding-right: 10px;
+  position: relative;
+  top: 5px;
+}
 .cart-info__heading {
+  display: flex;
+  align-items: center;
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 141.667%;
@@ -4681,6 +4689,13 @@ html.dark {
   justify-content: center;
   width: 24px;
   height: 100%;
+}
+
+.form-card__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -324,7 +324,7 @@
     }
 }
 
-// Shipping - Payment - Favourite
+// Shipping - Payment - Favourite - add new card
 .cart-info {
 
     &__top {
@@ -334,7 +334,17 @@
         gap: 20px;
     }
 
+    &__back-arrow {
+        width: 40px;
+        padding-right: 10px;
+        position: relative;
+        top: 5px;
+    }
+
     &__heading {
+        display: flex;
+        align-items: center;
+
         font-size: 2.4rem;
         font-weight: 700;
         line-height: 141.667%;
