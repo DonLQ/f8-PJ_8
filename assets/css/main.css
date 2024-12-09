@@ -66,7 +66,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: Gordita, sans-serif;
+  font-family: Lato, sans-serif;
   color: var(--text-color);
   background: var(--body-bg);
 }
@@ -1483,7 +1483,7 @@ html.dark {
 .top-bar {
   position: relative;
   z-index: 1;
-  padding: 30px 0;
+  padding: 16px 0;
 }
 @media (max-width: 991.98px) {
   .top-bar {
@@ -1698,6 +1698,12 @@ html.dark {
   font-weight: 500;
   line-height: 146.667%;
 }
+.top-act__user {
+  position: relative;
+}
+.top-act__user:hover .act-dropdown {
+  display: block;
+}
 .top-act__avatar {
   display: block;
   width: 50px;
@@ -1707,6 +1713,13 @@ html.dark {
   border-radius: 8px;
   box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.08);
   cursor: pointer;
+}
+.top-act__dropdown {
+  right: -5px !important;
+  width: min(300px, 100vW) !important;
+}
+.top-act__dropdown-arrow {
+  right: 15px !important;
 }
 
 .nav-btn {
@@ -1839,6 +1852,55 @@ html.dark {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 146.667%;
+}
+
+.user-menu__top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.user-menu__name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 146.667%;
+}
+.user-menu__username {
+  margin-top: 2px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 142.857%;
+}
+.user-menu__avatar {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+.user-menu__icon {
+  width: 16px;
+}
+.user-menu__list {
+  display: flex;
+  flex-direction: column;
+}
+.user-menu__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.user-menu__link:hover {
+  font-weight: 600;
+}
+.user-menu__separate {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--separate-color);
 }
 
 .footer {

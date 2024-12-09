@@ -20,7 +20,7 @@
     @extend %flexItemCenter;
     position: relative;
     z-index: 1;
-    padding: 30px 0;
+    padding: 16px 0;
 
     @include abstracts.screen(lg) {
         padding: 20px 0;
@@ -255,6 +255,14 @@
         line-height: 146.667%;
     }
 
+    &__user {
+        position: relative;
+
+        &:hover .act-dropdown {
+            display: block;
+        }
+    }
+
     &__avatar {
         display: block;
         width: 50px;
@@ -264,6 +272,15 @@
         border-radius: 8px;
         box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.08);
         cursor: pointer;  
+    }
+
+    &__dropdown {
+        right: -5px !important;
+        width: min(300px, 100vW) !important;
+    }
+
+    &__dropdown-arrow {
+        right: 15px !important;
     }
 }
 
@@ -418,4 +435,66 @@
         font-weight: 500;
         line-height: 146.667%;
     }
+}
+
+.user-menu {
+
+    &__top {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__name {
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 146.667%;
+    }
+
+    &__username {
+        margin-top: 2px;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 142.857%;
+    }
+
+    &__avatar {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.08);
+        cursor: pointer;  
+    }
+
+    &__icon {
+        width: 16px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 0;
+
+        font-size: 1.5rem;
+        font-weight: 400;
+
+        &:hover {
+            font-weight: 600;
+        }
+    }
+
+    &__separate {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid var(--separate-color);
+    }
+    
 }
